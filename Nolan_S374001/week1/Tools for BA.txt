@@ -1,0 +1,13 @@
+Tools for BA
+| **Tool**                     | **Main Use**                      | **Key Benefit**                                   |
+| ---------------------------- | --------------------------------- | ------------------------------------------------- |
+| **Jira**                     | Track requirements & user stories | Perfect for Agile, links tasks, bugs, and stories |
+| **Confluence**               | Documentation                     | Easy collaboration & linking with Jira            |
+| **Lucidchart / Draw\.io**    | Process & system diagrams         | Visualize workflows clearly                       |
+| **Balsamiq / Figma**         | Wireframing UI                    | Fast UI mockups to show ideas                     |
+| **Excel / Google Sheets**    | Data analysis & tracking          | Flexible and widely used                          |
+| **SQL tools** (e.g. DBeaver) | Querying data                     | Analyze real data to support decisions            |
+| **Slack / Teams**            | Team communication                | Real-time chat, integrates with other tools       |
+| **Trello / Asana**           | Task & project management         | Simple boards to organize work                    |
+| **Power BI / Tableau**       | Data dashboards                   | Visual reports for business insights              |
+| **Notion / OneNote**         | Notes & personal tracking         | Organize tasks and info in one place              |
