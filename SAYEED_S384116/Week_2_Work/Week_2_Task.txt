@@ -1,0 +1,97 @@
+Group tasks 
+
+    Discuss the waterfall, b, and SCRUM in the group meetings. 
+
+    Discuss the progress on individual tasks (tools installation, Blazor app). Group members help each other if anyone is having any difficulties. 
+
+    Research and discuss Angular applications and how to work with forms and tables. 
+
+    Research and discuss Microsoft Web API with Entity Framework examples. 
+
+    Research and discuss Angular Web API examples. 
+
+ 
+
+ 
+
+Individual tasks 
+
+    Finish tools installation if still not done and practice the Blazor app tutorial. 
+
+    Commit all the practice work to your individual folders in Git. 
+
+    Try to research and practice simple Angular applications. 
+
+        Forms and tables 
+
+        Data fields, buttons, and text boxes. 
+
+        CRUD operations 
+
+    Practice examples of Microsoft Web API with Entity Framework. 
+
+ 
+
+More practice tasks 
+
+    Primary Objective to achieve: 
+
+        Ability to build MVC simple request and response page 
+
+        Use Scaffolding to create CRUD pages  
+
+        Without using Scaffolding create CRUD pages 
+
+        Using entity framework - adding migrations  & updating database for your application 
+
+        Create form/views with different controller like tables, text fields, drop down list, check box, date picker 
+
+        Attributes/Tag Helpers  --https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/?view=aspnetcore-5.0 
+
+     
+
+    Task A: https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-5.0&tabs=visual-studio 
+
+        Note: Please do any example to make your learning simple that cover 
+
+ 
+
+    Task B: Create a web app project for theater admin to manage movies  
+
+        Ability to create/edit/update a movie information 
+
+            Movie 
+
+                Id  
+
+                Name 
+
+                Release date 
+
+                Director  
+
+                Contact Email address 
+
+                Language: enum (English, Japanese, Chinese) 
+
+                Category:  
+
+                    Fields: Id, Name, Code 
+
+                    Ability to create/edit/update categories 
+
+                    A movie will have one category @NOT NULL 
+
+                Ex: Action, Drama, Horror 
+
+                Show drop down list of categories available on Create/edit screen of movie 
+
+    Use scaffolding  options to create CRUD operations on movie and categories entity 
+
+    Create CRUD pages without scaffolding  
+
+    Use attributes to add validations on models 
+
+    Use SQL express to persist the data 
+
+        Use git for version control  and commit your changes for every major change in code 
