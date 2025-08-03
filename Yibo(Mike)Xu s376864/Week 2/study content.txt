@@ -1,0 +1,27 @@
+I have studied video in week 2
+Business Analyst Full Course In 2 Hours | Business Analyst Training For Beginners | Simplilearn
+
+https://www.youtube.com/watch?v=UBVzucVpG7k&list=PL8Bu4N9DmF0kWo-OH9iaXqiNa9ntzbeYi&index=4&t=2275s
+
+This course introduces the role, responsibilities, skills, knowledge areas, and tools of a Business Analyst. Designed for beginners, the session includes case studies, skill explanations, tool demonstrations, and certification guidance.
+
+Why Business Analysts Are in Demand:
+A case study features Rob, a café owner struggling during the pandemic. With help from a Business Analyst named Ted, they introduced solutions like a delivery app, meal kits, discount offers, and optimized staffing. Ted worked closely with Rob and the IT team, tracked progress, and documented everything. As a result, the café recovered 80% of its customer base. This shows how Business Analysts play a crucial role in solving problems and enabling business recovery through data-driven solutions.
+
+Roles and Responsibilities:
+In another example, Angela supports an entrepreneur in launching an e-commerce platform. She handles planning, gathers requirements, manages resources, collaborates with developers, runs user testing, and prepares reports. Business Analysts ensure that the final solution aligns with business needs, improves workflows, and is well-communicated and documented.
+
+Essential Skills:
+Business Analysts need both technical and interpersonal skills. These include business understanding, critical thinking, clear communication, negotiation, decision-making, basic programming (like R, Python, SAS), data visualization (using Tableau, Power BI), SQL/database knowledge, Excel for analysis, and effective documentation and presentations.
+
+Core Knowledge Areas (Based on BABOK):
+These include planning and monitoring analysis efforts, conducting requirement elicitation, managing requirements throughout their lifecycle, performing strategic analysis, modeling and validating requirements, and evaluating solutions to recommend improvements.
+
+Methodologies:
+Agile methodology involves incremental and iterative development through six stages: planning, designing, developing, testing, deploying, and reviewing. Scrum, a subset of Agile, relies on small, cross-functional teams with defined roles, artifacts (like product backlogs), and regular ceremonies (like sprint planning and daily stand-ups) to deliver fast and adaptive results.
+
+Career Outlook and Tools:
+Companies hiring include Paytm, Cognizant, Shell, Cisco, Google, Dell, EY, Oracle, and Barclays. Common tools include Excel, Trello, MySQL, SQL Server, PostgreSQL, JIRA, and Tableau.
+
+Excel Demonstration:
+The course includes a hands-on demo using a US sales dataset with nearly 10,000 rows. It shows how to use pivot tables and create visualizations like line charts (to track sales trends), bar charts (for product categories), pie charts (for profit distribution), and filled maps (to compare regional performance). A final interactive sales dashboard is built using these tools.
