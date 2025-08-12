@@ -1,0 +1,40 @@
+Although I was unable to attend the group meeting, I have reviewed the topics that were discussed and continued to stay aligned with the group’s progress:
+
+I followed up on the group's discussion of Waterfall, B-model, and SCRUM methodologies, and reviewed relevant materials to stay updated.
+
+I began exploring Angular applications, with a focus on working with forms and tables, as discussed by the group.
+
+I reviewed Microsoft Web API examples using Entity Framework to better understand backend integration.
+
+I also looked into Angular Web API integration examples to prepare for future development tasks.
+
+
+
+Video: https://www.youtube.com/watch?v=_Dcmk9mEP9s
+
+Introduces the role of a Business Analyst and how data supports business decisions
+
+Covers 4 types of analytics:
+
+Descriptive – what happened
+Diagnostic – why it happened
+Predictive – what might happen
+Prescriptive – what should be done
+
+Teaches essential tools:
+
+Excel – pivot tables, formulas, dashboards
+SQL – data querying and filtering
+Tableau / Power BI – data visualization and reporting
+
+Outlines the BA workflow:
+
+Gather requirements → Analyze → Document → Support development → Deliver solution
+Focuses on Agile methodology – writing user stories, sprints, team collaboration
+
+Highlights critical skills:
+
+Communication, analytical thinking, stakeholder management
+Includes real-world case studies (e.g., marketing, finance, e-commerce)
+Encourages building a portfolio of projects
+No deep coding required – strong business understanding is key
