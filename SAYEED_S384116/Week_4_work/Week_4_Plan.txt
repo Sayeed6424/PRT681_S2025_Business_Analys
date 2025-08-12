@@ -1,0 +1,52 @@
+PRT 681 - Weekly Task Tracker
+
+1. LinkedIn Learning Courses - Business Analyst Role
+[ ] Business Analysis Foundations - Learn BA fundamentals, stakeholder engagement, and requirements gathering.
+[ ] Data Analysis for Business Analysts - Covers data interpretation, dashboards, and translating data into insights.
+[ ] Agile Requirements Foundations (or Agile BA) - Learn BA role in agile projects, user stories, backlog grooming.
+Action Steps:
+- Allocate 3-4 hours per course.
+- Summarise each course in 1 page.
+- Save certificates for your resume.
+2. Canva Project - Problem-Solving Presentation
+Goal: Create a 5-8 slide presentation addressing a problem relevant to BA work.
+Possible Topics:
+- Improving Customer Onboarding in E-commerce
+- Enhancing Data Reporting with Power BI
+- Reducing Manual Processing in Retail Inventory
+Action Steps:
+- Select a problem.
+- Structure: Problem -> Analysis -> Solution -> Benefits -> Next Steps.
+- Use visuals, charts, icons.
+3. Research Topics - Technical Knowledge
+[ ] JSON - Definition, How it works, Use cases, BA relevance
+[ ] XML - Definition, How it works, Use cases, BA relevance
+[ ] Web Applications - Definition, How it works, Use cases, BA relevance
+[ ] Power Applications - Definition, How it works, Use cases, BA relevance
+[ ] Slack - Definition, How it works, Use cases, BA relevance
+[ ] Windows Applications - Definition, How it works, Use cases, BA relevance
+[ ] API - Definition, How it works, Use cases, BA relevance
+[ ] Dependency Injection - Definition, How it works, Use cases, BA relevance
+[ ] CI/CD - Definition, How it works, Use cases, BA relevance
+[ ] MVC - Definition, How it works, Use cases, BA relevance
+[ ] Blazor / ASP.NET - Definition, How it works, Use cases, BA relevance
+[ ] ORM - Definition, How it works, Use cases, BA relevance
+[ ] .NET Framework - Definition, How it works, Use cases, BA relevance
+4. Resume Preparation
+Goal: Create two tailored resumes:
+- Primary Role: Business Analyst
+- Secondary Role: Data Analyst
+Action Steps:
+- List relevant skills, tools, and experiences.
+- Use STAR method.
+- Highlight transferable skills.
+- Include LinkedIn course certificates.
+- Save in Word & PDF.
+Suggested Weekly Schedule
+[ ] Mon: Start LinkedIn Course 1 + Take Notes
+[ ] Tue: Finish Course 1 + Start Research on JSON, XML, API
+[ ] Wed: Start Canva Project - Outline & First Draft
+[ ] Thu: Continue Research (Application Types + Dev Concepts)
+[ ] Fri: Start LinkedIn Course 2 + Add Canva Project visuals
+[ ] Sat: Complete Course 2 + Research Frameworks (Blazor, ORM, .NET)
+[ ] Sun: Draft BA Resume + DA Resume
