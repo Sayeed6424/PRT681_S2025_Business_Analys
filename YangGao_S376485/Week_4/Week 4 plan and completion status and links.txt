@@ -1,0 +1,25 @@
+Plan
+
+1, Keep watching the video for Social Media Marketing onthe HubSpot CRM.
+
+
+2, Learn how to use SquareUp and how to manage inventory
+
+3, Learn how to use WooCommerce for Onlne shop
+
+4, Learn how to use Azure and Login Remote desktop, install MySQL on the virtual machine
+
+
+Completion Status: Complete.
+
+Vedio links:
+
+https://academy.hubspot.com/courses/social-media
+
+https://www.youtube.com/watch?v=yhcGXnrRdhU
+
+https://www.youtube.com/watch?v=UL1k8jG_f28
+
+https://www.youtube.com/watch?v=G1Zu_8F2Hz0
+
+https://www.youtube.com/watch?v=hiS_mWZmmI0
