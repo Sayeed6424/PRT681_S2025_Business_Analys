@@ -1,0 +1,196 @@
+
+# SQL Learning Notes & Cheat Sheet
+
+## AND & OR Operator
+Example with AND:
+SELECT FirstName, LastName, Department, Salary
+FROM Employees
+WHERE Department = 'IT' AND Salary > 80000;
+
+Example with OR:
+SELECT FirstName, LastName, Department
+FROM Employees
+WHERE Department = 'IT' OR Department = 'HR';
+
+Example with AND + OR:
+SELECT FirstName, LastName, Department, Salary
+FROM Employees
+WHERE (Department = 'IT' AND Salary > 80000)
+   OR (Department = 'HR' AND Salary > 60000);
+
+---
+
+## LIKE Operator
+Pattern matching with LIKE:
+
+- % : matches zero or more characters
+- _ : matches a single character
+
+Examples:
+- Names starting with A: WHERE FirstName LIKE 'A%';
+- Names ending with n: WHERE FirstName LIKE '%n';
+- Emails with Gmail: WHERE Email LIKE '%@gmail.com';
+
+Industry Uses:
+- Retail: ProductName LIKE '%Laptop%';
+- Banking: Email LIKE '%@gmail.com';
+- HR: JobTitle LIKE '%Manager%';
+- Healthcare: Diagnosis LIKE '%COVID%';
+- Telecom: Phone LIKE '089%';
+
+---
+
+## GROUP BY Operator
+Used to group rows by a column and apply aggregate functions.
+
+Examples:
+- Average salary by department:
+  SELECT Department, AVG(Salary) FROM Employees GROUP BY Department;
+
+Industry Uses:
+- Retail: COUNT products per category
+- Banking: SUM deposits per branch
+- HR: AVG salary per department
+- Healthcare: COUNT patients per diagnosis
+
+---
+
+## HAVING Clause
+Filters aggregated results (after GROUP BY).
+
+Example:
+SELECT Department, AVG(Salary) AS AvgSalary
+FROM Employees
+GROUP BY Department
+HAVING AVG(Salary) > 80000;
+
+Difference:
+- WHERE filters rows
+- HAVING filters groups
+
+---
+
+## CASE Clause
+Conditional logic inside SQL queries.
+
+Example:
+SELECT FirstName, Salary,
+  CASE
+    WHEN Salary >= 80000 THEN 'High'
+    WHEN Salary >= 60000 THEN 'Medium'
+    ELSE 'Low'
+  END AS SalaryCategory
+FROM Employees;
+
+Industry Uses:
+- Retail: Discounts by category
+- Banking: Mark debit/credit
+- Healthcare: Categorize patients by age
+- Telecom: Classify plans
+
+---
+
+## INNER JOIN
+Combines rows where a match exists in both tables.
+
+Example:
+SELECT Employees.Name, Departments.DepartmentName
+FROM Employees
+INNER JOIN Departments
+  ON Employees.DepartmentID = Departments.DepartmentID;
+
+Industry Uses:
+- Retail: Orders + Customers
+- Banking: Accounts + Customers
+- HR: Employees + Departments
+- Healthcare: Patients + Appointments
+
+---
+
+## LEFT JOIN vs INNER JOIN vs RIGHT JOIN
+- INNER JOIN: Only rows with matches in both tables
+- LEFT JOIN: All rows from left + matches from right
+- RIGHT JOIN: All rows from right + matches from left
+
+Example Scenario:
+Employees Table: Alice(10), Bob(20), Charlie(NULL)
+Departments Table: IT(10), HR(20), Finance(30)
+
+INNER JOIN → Alice-IT, Bob-HR
+LEFT JOIN → Alice-IT, Bob-HR, Charlie-NULL
+RIGHT JOIN → Alice-IT, Bob-HR, NULL-Finance
+
+---
+
+## Interview Questions for JOIN
+Basic:
+- What is JOIN?
+- Difference INNER vs OUTER?
+- JOIN vs UNION?
+
+Intermediate:
+- SELF JOIN example?
+- CROSS JOIN vs INNER JOIN?
+- USING vs ON?
+
+Advanced:
+- How does JOIN work internally?
+- How to find unmatched records?
+- Performance issues with large joins?
+
+Practical:
+- Employees with department names
+- Customers with no orders
+- Departments with no employees
+
+---
+
+## SQL Cheat Sheet (Quick Reference)
+
+### Basics
+SHOW DATABASES;  
+USE db_name;  
+SHOW TABLES;  
+CREATE DATABASE db_name;  
+DROP DATABASE db_name;  
+
+### Table Operations
+CREATE TABLE Employees (...);  
+DESCRIBE Employees;  
+DROP TABLE Employees;  
+ALTER TABLE Employees RENAME TO Staff;  
+
+### CRUD
+INSERT INTO Employees (...);  
+SELECT * FROM Employees;  
+UPDATE Employees SET Salary=95000 WHERE EmployeeID=1;  
+DELETE FROM Employees WHERE EmployeeID=1;  
+
+### Filtering
+WHERE Salary > 80000;  
+LIKE 'A%';  
+IN (10,20,30);  
+BETWEEN 60000 AND 100000;  
+
+### Sorting & Limiting
+ORDER BY Salary DESC;  
+LIMIT 5;  
+
+### Aggregate Functions
+COUNT(*), AVG(), SUM(), MIN(), MAX()  
+
+### GROUP BY & HAVING
+GROUP BY DepartmentID;  
+HAVING COUNT(*) > 5;  
+
+### Joins
+INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN  
+
+### CASE Example
+CASE WHEN Salary > 80000 THEN 'High' ELSE 'Low' END  
+
+### Subquery Example
+WHERE Salary > (SELECT AVG(Salary) FROM Employees);  
+
+### Constraints
+PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL  
