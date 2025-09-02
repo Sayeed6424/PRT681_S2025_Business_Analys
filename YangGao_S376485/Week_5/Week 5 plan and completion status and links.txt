@@ -1,1 +1,4 @@
-s
+Keep learning Power BI and SQL, focusing on basic concepts and simple operations. 
+Baisic learning about PHP 
+Baisic learning about HTML and CSS 
+Baisic learning aboutt Javascript
