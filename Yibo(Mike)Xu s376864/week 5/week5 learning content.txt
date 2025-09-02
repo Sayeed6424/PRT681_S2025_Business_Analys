@@ -1,0 +1,333 @@
+SQL Syntax Overview
+Basic SQL Syntax (Beginner Level)
+
+These are the building blocks for any SQL query.
+
+1. SELECT (Retrieve Data)
+SELECT name, age 
+FROM employees;
+
+
+Retrieves the name and age columns from the employees table.
+
+2. WHERE (Filtering Rows)
+SELECT * 
+FROM employees 
+WHERE age > 30;
+
+
+ Returns all employees older than 30.
+
+3. ORDER BY (Sorting Results)
+SELECT name, salary 
+FROM employees 
+ORDER BY salary DESC;
+
+
+ Sorts employees by salary in descending order.
+
+4. LIMIT (Restrict Rows)
+SELECT * 
+FROM employees 
+LIMIT 5;
+
+
+ Returns only the first 5 rows.
+
+5. INSERT (Add Data)
+INSERT INTO employees (name, age, department, salary) 
+VALUES ('Alice', 28, 'HR', 50000);
+
+6. UPDATE (Modify Data)
+UPDATE employees 
+SET salary = 60000 
+WHERE name = 'Alice';
+
+7. DELETE (Remove Data)
+DELETE FROM employees 
+WHERE age < 18;
+
+Intermediate SQL Syntax
+1. Aggregate Functions
+SELECT department, AVG(salary) AS avg_salary 
+FROM employees 
+GROUP BY department;
+
+
+  Groups by department and calculates average salary.
+
+2. HAVING (Filter After Grouping)
+SELECT department, COUNT(*) AS emp_count 
+FROM employees 
+GROUP BY department 
+HAVING COUNT(*) > 5;
+
+
+  Shows only departments with more than 5 employees.
+
+3. Joins (Combine Tables)
+
+INNER JOIN
+
+SELECT e.name, d.department_name 
+FROM employees e
+INNER JOIN departments d ON e.department_id = d.id;
+
+
+LEFT JOIN
+
+SELECT e.name, d.department_name 
+FROM employees e
+LEFT JOIN departments d ON e.department_id = d.id;
+
+4. Aliases
+SELECT name AS employee_name, salary AS monthly_salary 
+FROM employees;
+
+ Advanced SQL Syntax
+1. Subqueries
+SELECT name, salary 
+FROM employees 
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+
+ Finds employees earning above the average salary.
+
+2. CASE (Conditional Logic)
+SELECT name,
+       CASE 
+           WHEN salary > 70000 THEN 'High'
+           WHEN salary BETWEEN 40000 AND 70000 THEN 'Medium'
+           ELSE 'Low'
+       END AS salary_level
+FROM employees;
+
+3. Window Functions (Ranking, Running Totals, etc.)
+SELECT name, salary,
+       RANK() OVER (ORDER BY salary DESC) AS salary_rank
+FROM employees;
+
+4. Common Table Expressions (CTE)
+WITH high_earners AS (
+    SELECT name, salary 
+    FROM employees 
+    WHERE salary > 60000
+)
+SELECT * 
+FROM high_earners;
+
+5. Transactions (Ensure Data Integrity)
+BEGIN;
+UPDATE employees SET salary = salary + 1000 WHERE department = 'IT';
+DELETE FROM employees WHERE department = 'HR' AND age < 20;
+COMMIT;
+
+
+  If something goes wrong, you can ROLLBACK instead of COMMIT.
+
+ Summary:
+
+Basic SQL: SELECT, WHERE, ORDER BY, LIMIT, INSERT, UPDATE, DELETE
+
+Intermediate SQL: GROUP BY, HAVING, Joins, Aliases
+
+Advanced SQL: Subqueries, CASE, Window Functions, CTEs, Transactions
+
+
+
+PostgreSQL in Supabase
+1. What is Supabase
+
+Supabase is an open-source Backend-as-a-Service (BaaS).
+
+It provides:
+
+A fully managed PostgreSQL database
+
+Authentication (email, social logins, magic links)
+
+Auto-generated REST and GraphQL APIs
+
+Realtime subscriptions
+
+File storage
+
+2. PostgreSQL in Supabase
+
+The core of Supabase is PostgreSQL.
+
+You get a managed PostgreSQL instance with no setup required.
+
+You can use standard SQL queries.
+
+Connection options:
+
+Supabase web console (SQL editor)
+
+psql command line tool
+
+Any PostgreSQL client (DBeaver, TablePlus, PgAdmin, etc.)
+
+3. How to Connect
+
+Example using psql CLI:
+
+psql "host=db.xxxxx.supabase.co port=5432 dbname=postgres user=postgres password=YOUR_PASSWORD sslmode=require"
+
+4. Example Queries
+
+Create a table:
+
+CREATE TABLE employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(50),
+    salary NUMERIC,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+
+Insert data:
+
+INSERT INTO employees (name, department, salary)
+VALUES 
+  ('Alice', 'HR', 50000),
+  ('Bob', 'IT', 70000),
+  ('Charlie', 'Finance', 65000);
+
+
+Query data:
+
+SELECT name, department, salary
+FROM employees
+WHERE salary > 60000
+ORDER BY salary DESC;
+
+5. Supabase-Specific Features
+
+Row Level Security (RLS) example:
+
+CREATE POLICY "Allow logged-in users to see their own data"
+ON employees
+FOR SELECT
+USING (auth.uid() = user_id);
+
+
+
+Advanced SQL / PostgreSQL Knowledge
+1. Subqueries
+
+A query inside another query.
+
+Useful for filtering or comparing with aggregated results.
+
+SELECT name, salary
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+2. Common Table Expressions (CTEs)
+
+Makes queries easier to read and reuse.
+
+WITH high_salaries AS (
+    SELECT name, salary FROM employees WHERE salary > 60000
+)
+SELECT * FROM high_salaries ORDER BY salary DESC;
+
+3. Window Functions
+
+Perform calculations across a set of rows without collapsing them into groups.
+
+Examples: ranking, running totals, moving averages.
+
+SELECT name, salary,
+       RANK() OVER (ORDER BY salary DESC) AS salary_rank,
+       AVG(salary) OVER (PARTITION BY department) AS avg_dept_salary
+FROM employees;
+
+4. Transactions
+
+Allow grouping of multiple operations into one atomic unit.
+
+If one fails, you can rollback.
+
+BEGIN;
+UPDATE employees SET salary = salary + 1000 WHERE department = 'IT';
+DELETE FROM employees WHERE department = 'HR' AND age < 20;
+COMMIT;
+
+5. Indexes and Performance
+
+Indexes make queries faster.
+
+Types: B-Tree (default), Hash, GIN (for JSON/arrays), GiST (for text search).
+
+CREATE INDEX idx_employees_department ON employees(department);
+
+6. JSON and JSONB
+
+PostgreSQL has powerful support for semi-structured data.
+
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    customer JSONB
+);
+
+INSERT INTO orders (customer)
+VALUES ('{"name": "Alice", "age": 30, "city": "Sydney"}');
+
+SELECT customer->>'name' AS name
+FROM orders;
+
+7. Full-Text Search
+
+PostgreSQL allows natural language search.
+
+SELECT * 
+FROM documents
+WHERE to_tsvector(content) @@ to_tsquery('machine & learning');
+
+8. Stored Procedures and Functions
+
+Write reusable business logic inside the database.
+
+CREATE OR REPLACE FUNCTION raise_salary(emp_id INT, amount NUMERIC)
+RETURNS VOID AS $$
+BEGIN
+  UPDATE employees SET salary = salary + amount WHERE id = emp_id;
+END;
+$$ LANGUAGE plpgsql;
+
+9. Triggers
+
+Automatically execute logic when certain events happen.
+
+CREATE OR REPLACE FUNCTION log_changes()
+RETURNS TRIGGER AS $$
+BEGIN
+  INSERT INTO audit_log(table_name, changed_at)
+  VALUES (TG_TABLE_NAME, NOW());
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER employee_update_trigger
+AFTER UPDATE ON employees
+FOR EACH ROW EXECUTE FUNCTION log_changes();
+
+10. Security and Row Level Security (RLS)
+
+Limit which rows a user can access.
+
+ALTER TABLE employees ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "User can only see their own data"
+ON employees
+FOR SELECT
+USING (auth.uid() = user_id);
+
+Summary
+
+Intermediate: subqueries, CTEs, joins, aggregations
+
+Advanced: window functions, transactions, indexes, JSON/JSONB, full-text search, functions, triggers, row-level security
