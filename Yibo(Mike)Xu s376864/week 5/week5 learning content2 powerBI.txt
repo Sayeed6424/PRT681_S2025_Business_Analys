@@ -1,0 +1,207 @@
+Power BI Knowledge
+1. Introduction to Power BI
+
+Power BI is a Microsoft business intelligence tool for data visualization and analytics.
+
+Main components:
+
+Power BI Desktop: desktop application to create reports
+
+Power BI Service: online platform for sharing dashboards
+
+Power BI Mobile: view reports on mobile devices
+
+2. Data Import and Transformation
+
+Import data from various sources: Excel, CSV, SQL databases, web APIs, etc.
+
+Use Power Query Editor for data cleaning:
+
+Remove unnecessary columns
+
+Filter rows
+
+Rename fields
+
+Merge or append tables
+
+Change data types
+
+3. Data Modeling
+
+Define relationships between tables: one-to-many, many-to-many
+
+Understand primary keys and foreign keys
+
+Create calculated columns and measures using DAX (Data Analysis Expressions)
+
+Example of a DAX measure:
+
+Total Sales = SUM(Sales[Amount])
+
+4. Data Visualization
+
+Basic visuals:
+
+Column chart, bar chart, line chart, pie chart
+
+Tables, matrices, cards
+
+Advanced visuals:
+
+Waterfall chart, funnel chart, KPI visuals, map visuals
+
+Use Slicers and Filters for interactivity
+
+Customize colors, labels, and tooltips
+
+5. DAX Functions (Intermediate)
+
+Aggregation: SUM, AVERAGE, COUNT, DISTINCTCOUNT
+
+Logical: IF, SWITCH
+
+Time intelligence:
+
+Sales Last Month = CALCULATE(SUM(Sales[Amount]), PREVIOUSMONTH(Date[Date]))
+
+
+Filtering: CALCULATE, FILTER
+
+6. Advanced Power BI Features
+
+Bookmarks: save views of a report
+
+Drill-through: navigate from summary to detail pages
+
+Row-Level Security (RLS): restrict data for specific users
+
+Parameters: dynamically change data inputs in queries
+
+Themes: consistent design and formatting
+
+7. Power BI Service (Cloud)
+
+Publish reports from Desktop to Service
+
+Create dashboards by pinning visuals
+
+Schedule data refresh for up-to-date reports
+
+Share reports with colleagues or embed in apps
+
+8. Performance Optimization
+
+Optimize data models: remove unused columns, reduce table sizes
+
+Use star schema design for large datasets
+
+Avoid complex calculated columns when possible; prefer measures
+
+Monitor report performance with Performance Analyzer
+
+9. Integration with Other Tools
+
+Connect to SQL, PostgreSQL, Azure, SharePoint, Excel
+
+Embed visuals into Power Apps or websites
+
+Combine Power BI with Python or R scripts for advanced analytics
+
+
+
+Advanced Power BI Knowledge
+1. Advanced DAX (Data Analysis Expressions)
+
+Time Intelligence Functions:
+
+SAMEPERIODLASTYEAR, DATEADD, TOTALYTD
+
+Filter Context & Row Context: understand how DAX calculates values depending on filters
+
+CALCULATE Function: change filter context dynamically
+
+Sales_Last_Month = CALCULATE(SUM(Sales[Amount]), PREVIOUSMONTH(Date[Date]))
+
+
+Variables in DAX: improve readability and performance
+
+ProfitMargin = 
+VAR TotalSales = SUM(Sales[Amount])
+VAR TotalCost = SUM(Sales[Cost])
+RETURN (TotalSales - TotalCost) / TotalSales
+
+2. Data Modeling Best Practices
+
+Use Star Schema for better performance
+
+Minimize relationships between large tables; prefer lookup tables
+
+Define calculated tables or measures instead of extra columns
+
+Use hierarchies for drill-down (Year > Quarter > Month > Day)
+
+3. Advanced Visualization Techniques
+
+Custom visuals from AppSource or community visuals
+
+Drill-through pages: navigate from summary to detailed reports
+
+Dynamic titles and labels using DAX
+
+Conditional formatting for charts, tables, and cards
+
+Tooltips: create report page tooltips for interactive insights
+
+4. Row-Level Security (RLS)
+
+Restrict data visibility by user or role
+
+[UserID] = USERPRINCIPALNAME()
+
+
+Combine RLS with dynamic filtering for multi-tenant scenarios
+
+5. Power Query / M Language (Advanced)
+
+Use M functions for data transformation
+
+Merge, append, pivot/unpivot large datasets efficiently
+
+Create parameterized queries to dynamically load data
+
+Handle errors and data type changes programmatically
+
+6. Performance Optimization
+
+Reduce data size: remove unnecessary columns, filter rows before import
+
+Avoid calculated columns when a measure can be used
+
+Use Aggregations for large datasets
+
+Optimize visuals: limit slicers and complex visuals on a single page
+
+Use Performance Analyzer to identify slow queries and visuals
+
+7. Integration & Automation
+
+Connect to external sources: SQL, PostgreSQL, Azure, SharePoint, APIs
+
+Use Python or R scripts for advanced analytics
+
+Automate data refresh: schedule refresh in Power BI Service
+
+Embed Power BI reports in apps, websites, or Power Apps
+
+8. Advanced Analytics
+
+Forecasting with built-in analytics (line charts)
+
+What-if parameters to simulate scenarios
+
+Decomposition tree to analyze metrics hierarchically
+
+Q&A feature for natural language queries
+
+Combine Power BI with AI models via Azure Cognitive Services or Python/R
