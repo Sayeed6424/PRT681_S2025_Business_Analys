@@ -1,4 +1,22 @@
+
+Plan
+
 Keep learning Power BI and SQL, focusing on basic concepts and simple operations. 
 Baisic learning about PHP 
 Baisic learning about HTML and CSS 
 Baisic learning aboutt Javascript
+
+
+Completion Status: Complete.
+
+Vedio links:
+
+https://academy.hubspot.com/courses/social-media
+
+https://www.youtube.com/watch?v=yhcGXnrRdhU
+
+https://www.youtube.com/watch?v=UL1k8jG_f28
+
+https://www.youtube.com/watch?v=G1Zu_8F2Hz0
+
+https://www.youtube.com/watch?v=hiS_mWZmmI0
