@@ -11,12 +11,6 @@ Completion Status: Complete.
 
 Vedio links:
 
-https://academy.hubspot.com/courses/social-media
+https://www.linkedin.com/learning/php-essential-training-2017/installation-overview-14759667?u=49050689
 
-https://www.youtube.com/watch?v=yhcGXnrRdhU
-
-https://www.youtube.com/watch?v=UL1k8jG_f28
-
-https://www.youtube.com/watch?v=G1Zu_8F2Hz0
-
-https://www.youtube.com/watch?v=hiS_mWZmmI0
+https://www.linkedin.com/learning/html-css-and-javascript-building-the-web/learn-the-web-by-building?u=49050689
